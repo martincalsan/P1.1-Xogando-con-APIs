@@ -547,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &355186882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1860,6 +1860,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1120631527}
   - component: {fileID: 1120631528}
+  - component: {fileID: 1120631530}
+  - component: {fileID: 1120631529}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1894,6 +1896,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0d0c6473dc9bc4eb645aae9de67b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1120631529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120631526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beeefa22c2174ca49982475b64d8bd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgPokemon: {fileID: 608279548}
+  answerButtons:
+  - {fileID: 1554659010}
+  - {fileID: 1308832026}
+  - {fileID: 2099689217}
+  - {fileID: 1068669025}
+  panelResult: {fileID: 355186881}
+  txtResult: {fileID: 224741130}
+  txtReveal: {fileID: 65469908}
+  colorCorrect: {r: 0, g: 1, b: 0, a: 1}
+  colorWrong: {r: 1, g: 0, b: 0, a: 1}
+  colorDefault: {r: 1, g: 1, b: 1, a: 1}
+  resultDisplayTime: 2
+--- !u!114 &1120631530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120631526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5192bb7f891bd7d4a8c6c5dc2485c658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalRounds: 10
+  pokeAPIManager: {fileID: 1120631528}
 --- !u!1 &1148260553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1148260554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2171,7 +2212,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1554659011}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
