@@ -104,4 +104,10 @@ public class GameManager : MonoBehaviour
 
     public int GetScore() => score;
     public int GetTotalRounds() => totalRounds;
+    public void ResetGame()
+    {
+        currentRound = 0;
+        score = 0;
+        StartNewRound();
+    }
 }

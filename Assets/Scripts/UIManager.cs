@@ -21,7 +21,10 @@ public class UIManager : MonoBehaviour
 
     [Header("Tiempo entre rondas (segundos)")]
     public float resultDisplayTime = 2f;
-
+    
+    [Header("Panel Puntuación")]
+    public GameObject panelScore;
+    public TextMeshProUGUI txtFinalScore;
     public static UIManager Instance { get; private set; }
 
     private void Awake()
@@ -87,10 +90,17 @@ public class UIManager : MonoBehaviour
     }
 
     private void ShowScore()
-    {
-        // Lo completamos en el Commit 6
-        Debug.Log($"Partida terminada. Puntuación: {GameManager.Instance.GetScore()}/{GameManager.Instance.GetTotalRounds()}");
-    }
+{
+    panelResult.SetActive(false);
+    panelScore.SetActive(true);
+    txtFinalScore.text = $"{GameManager.Instance.GetScore()} / {GameManager.Instance.GetTotalRounds()}";
+}
+
+public void RestartGame()
+{
+    panelScore.SetActive(false);
+    GameManager.Instance.ResetGame();
+}
 
     private string CapitalizeFirst(string s)
     {
